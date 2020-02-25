@@ -1,0 +1,25 @@
+package mainPackage;
+import java.util.*;
+
+
+class name{  
+	void address(){System.out.println("kumbakonam");}  
+	}  
+	class num extends name{  
+	void name(){System.out.println("imran");}  
+	}  
+	class phonebook extends num{  
+	void num(){System.out.println("7418387111");}  
+	}  
+public class Main {
+public static void main(String[] args) {
+		
+		
+			phonebook d=new phonebook();  
+			d.num();  
+			d.name();  
+			d.address();  
+      	}
+	
+	
+}
