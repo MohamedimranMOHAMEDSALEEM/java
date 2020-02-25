@@ -1,0 +1,21 @@
+import java.util.Scanner; 
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+	    System.out.println("enter the Mark");
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		System.out.println(a);
+	    if(a<=100 && a>=50)
+	    {
+	    	System.out.println("PASS");
+	    }
+	    else 
+	    {
+	    	System.out.println("FAIL;");
+	    }
+	
+	}
+}
