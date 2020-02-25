@@ -1,0 +1,24 @@
+import java.util.*;
+class constructor
+{
+    String name;
+    int rollnum;
+    
+    constructor(String name,int rollnum)
+    {
+        this.name=name;
+        this.rollnum=rollnum;
+    }
+    
+}
+public class Main
+{
+
+	public static void main(String[] args) {
+		
+		constructor c = new constructor("imran",343);
+		System.out.println(c.name + "" + c.rollnum);
+		constructor c1 = new constructor("mohamed",634);
+		System.out.println(c1.name + "" + c1.rollnum);
+}
+}
