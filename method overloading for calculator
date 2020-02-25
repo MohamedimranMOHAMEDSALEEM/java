@@ -1,0 +1,31 @@
+import java.util.*;
+class cal
+{
+    
+   public void calculator(int a,int b)
+	{
+		System.out.println("add" + a+b);
+		System.out.println("multiply" + a*b);
+		System.out.println("divide" + a/b);
+
+	}
+	 public void calculator(int a,int b,int c)
+	{
+		System.out.println("add" + a+b+c);
+		System.out.println("multiply" + a*b*c);
+		System.out.println("divide" + a+b/c);
+
+	}
+}
+public class Main
+{
+
+	public static void main(String[] args) {
+		
+		cal c = new cal();
+		c.calculator(45,75);
+		c.calculator(34,75,235);
+}
+}
+
+
