@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+		System.out.println("enter the integer");
+		int a = sc.nextInt();
+		System.out.println("enter the byte");
+		byte b =  (byte)sc.nextInt();
+		System.out.println("enter the short");
+		short c = (short)sc.nextInt();
+		System.out.println("enter the long");
+		long d = sc.nextInt();
+		System.out.println("enter the float");
+		float e = sc.nextInt();
+		System.out.println("enter the double");
+		double f = sc.nextInt();
+		System.out.println("enter the char");
+		char g = (char)sc.nextInt();
+		System.out.println(8>9);
+
+	}
+}
