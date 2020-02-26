@@ -1,0 +1,61 @@
+package mainPackage;
+import java.util.*;
+class Student
+{
+ int studentRollnumber;
+ String studentName;
+ int studentMarkenglish;
+ int studentMarkmaths;
+ int studentMarksocial;
+ int total;
+ float average;
+ float percentage;
+   Student (int studentRollnumber, String studentName,int studentMarkenglish,int studentMarkmaths,int studentMarksocial)
+ {
+   this.studentRollnumber = studentRollnumber;
+   this.studentName = studentName;
+   this.studentMarkenglish=studentMarkenglish;
+   this.studentMarkmaths=studentMarkmaths;
+   this.studentMarksocial=studentMarksocial;
+   this.total=studentMarkenglish+studentMarkmaths+studentMarksocial;
+   this.average=total/3;
+   this.percentage=(total/300)*100;
+ }
+@Override
+public String toString() {
+	return "Student [studentRollnumber=" + studentRollnumber + ", studentName=" + studentName + ", studentMarkenglish="
+			+ studentMarkenglish + ", studentMarkmaths=" + studentMarkmaths + ", studentMarksocial=" + studentMarksocial
+			+ ", total=" + total + ", average=" + average + ", percentage=" + percentage + "]";
+}
+   
+}
+public class Se {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int limit= input.nextInt();
+		Set<Student> studentSet = new HashSet();
+		while(limit>0)
+		{
+			System.out.println("Enter the roll number");
+			int rollnumber = input.nextInt();
+			System.out.println("Enter the name");
+			String name= input.next();
+			System.out.println("Enter the Marks");
+			int englishMark= input.nextInt();
+			int mathsMark= input.nextInt();
+			int socialMark= input.nextInt();
+			limit--;
+			Student studentDetails = new Student(rollnumber,name,englishMark,mathsMark,socialMark);
+			studentSet.add(studentDetails);
+		}
+		Iterator<Student> iterate =  studentSet.iterator();
+		while(iterate.hasNext())
+		{
+			System.out.println(iterate.next());
+		}
+		
+
+	}
+
+}
