@@ -1,0 +1,73 @@
+package map;
+import java.util.*;
+class Student
+{
+	String name;
+	int mark;
+    String name1;
+    int mark1;
+ 
+   Student (String name, int mark,String name1,int mark1)
+ {
+   this.name = name;
+   this.mark = mark;
+   this.name1=name1;
+   this.mark1=mark1;
+ }   
+   @Override
+	public String toString() {
+		return "students marks [name= " + name + "mark= " + mark + "name1= " + name1 + "mark1= " + mark1 + "]";
+
+   }
+}
+class Rollnumber
+{
+	int rollnumber;
+	Rollnumber(int rollnumber)
+	{
+		this.rollnumber=rollnumber;
+	}
+	@Override
+	public String toString() {
+		return "Rollnumber [rollnumber=" + rollnumber + "]";
+	}
+	
+}
+public class Maptest {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the number of students");
+		Scanner input = new Scanner(System.in);
+		int limit= input.nextInt();
+		Map<Rollnumber,Student> studentMap = new HashMap<>();
+		while(limit>0)
+		{
+			System.out.println("Enter the roll number");
+			int rollnumber = input.nextInt();
+			System.out.println("Enter the subname" + "Enter the mark");
+			String name= input.next();
+			int mark= input.nextInt();
+			System.out.println("Enter the subname" + "Enter the mark");
+			String name1= input.next();
+			int mark1= input.nextInt();
+			limit--;
+			Student studentDetails = new Student(name,mark,name1,mark1);
+			Rollnumber rollnum = new Rollnumber(rollnumber);
+			studentMap.put(rollnum,studentDetails);
+		}
+		
+		 for (Map.Entry<Rollnumber,Student> entry : studentMap.entrySet())  
+		 {
+	            System.out.println("Key = " + entry.getKey() + 
+	                             ", Value = " + entry.getValue()); 
+	            
+	            
+		 }
+		 
+		 
+		 
+		 
+
+	}
+
+}
