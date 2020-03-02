@@ -1,0 +1,46 @@
+package game;
+
+import java.util.Scanner;
+
+public class Game {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		String[] name = { "i", "m", "r" , "a" , "n" };
+		int chance = 5;
+		int x=0;
+		Scanner scan = new Scanner(System.in);
+		for(int limit = 0; limit<chance;limit++)
+		{
+			String enterChracter = scan.next();
+    		boolean found = true;
+
+		
+			for (int i = 0; i < name.length; i++)
+			{
+				if(enterChracter.equals(name[i])) 
+				{
+				   System.out.println("correct");
+				   found = false;
+				   limit--;
+				   break;
+				}
+			}
+			if(found)
+			{
+				   System.out.println("sorry wrong");
+				   x++;
+				   if(x==chance)
+				   {
+					   System.out.println("the end");
+					   break;
+
+				   }
+
+			}
+		}
+		
+	}
+
+}
