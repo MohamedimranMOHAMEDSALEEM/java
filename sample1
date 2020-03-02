@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		String[] name = { "i", "m", "r" , "a" , "n" };
+		String[] name1 = { "_", "_", "_" , "_" , "_" };
+		int chance = 5;
+		int x=0,i;
+		Scanner scan = new Scanner(System.in);
+		for(int limit = 0; limit<chance;limit++)
+		{
+			String enterChracter = scan.next();
+    		boolean found = true;
+
+
+			for (i = 0; i < name.length; i++)
+			{
+				if(enterChracter.equals(name[i])) 
+				{
+				   System.out.println("correct");
+				   found = false;
+				   limit--;
+				   break;
+				}
+			}
+			if(found)
+			{
+				   System.out.println("sorry wrong");
+				   System.out.println("you lossed one chance");
+
+				   x++;
+				   if(x==chance-1)
+				   {
+				       System.out.println("this is last chance : [HINT : VALEO NEXT CEO]");
+				   }
+				   if(x==chance)
+				   {
+					   System.out.println("the end");
+					   break;
+
+				   }
+
+			}
+			else
+			{
+			    for(int h=0;h<name1.length;h++)
+			    {
+			        if(i==h)
+			        {
+			            System.out.print(name[i]);
+			        }
+			        else
+			        {
+			            System.out.print(name1[h] + " ");
+   
+			        }
+			    }
+			}
+		}
+
+	}
+
+}
